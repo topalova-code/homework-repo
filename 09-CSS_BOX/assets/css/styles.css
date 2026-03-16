@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+.container {
+    width: min(90%, 1170px);
+    margin: 0 auto;
+
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #FFF;
+    font-style: normal;
+}
+
+main {
+    background-color: #39C;
+    border: 25px solid #2B81AC;
+     min-height: 100vh;
+
+}
+
+.cities {
+    list-style: none;
+    text-align: center;
+    font-size: 0;
+    border: 2px solid #FFF;
+}
+
+li {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    font-size: 22px;
+    height: 147px;
+    padding-top: 26px;
+    border: 2px solid #FFF;
+
+}
+
+h1 {
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 37.62px;
+    padding-top: 66.1px;
+
+}
+
+h1 .wi {
+    font-size: 27px;
+    margin-left: 4px;
+}
+
+p {
+    font-size: 16px;
+    margin-top: 35px;
+    margin-bottom: 119px;
+    font-weight: 400;
+
+}
+
+.wi {
+    font-size: 42px;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+
+.temp {
+    margin-top: 19px;
+}
+
+
+ul:hover li {
+
+    opacity: 0.7;
+}
+
+ul li:hover {
+    opacity: 1;
+}
+
+.box-light-blue {
+    width: 50%;
+    background: #39C;
+}
+
+.box-turquoise {
+    width: 25%;
+    background: #3CC;
+}
+
+.box-purple {
+    width: 25%;
+    background: #969;
+}
+
+.box-red {
+    width: 25%;
+    background: #C24747;
+}
+
+.box-orange {
+    width: 25%;
+    background: #E2674A;
+}
+
+.box-yellow {
+    width: 25%;
+    background: #FC6;
+}
+
+.box-light-green {
+    width: 25%;
+    background: #9C9;
+}
+
+.box-grey-green {
+    width: 25%;
+    background: #699;
+}
+
+.box-pink {
+    width: 50%;
+    background: #C69;
+}
+
+.box-green {
+    width: 25%;
+    background: #396;
+}
+
+.box-dark-purple {
+    width: 100%;
+    background: #669;
+}
