@@ -336,7 +336,7 @@ p {
     gap: 10px;
 }
 
-.reset-btn {
+.delete-btn {
     width: 30px;
     height: 30px;
     border: 1px solid var(--secondary-grey);
@@ -373,6 +373,14 @@ p {
     height: 38px;
     border: 1px solid var(--secondary-grey);
     padding-top: 3px;
+      &:focus {
+        border-color: var(--primary-blue);
+
+    }
 
 
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: var(--secondary-grey);
 }
