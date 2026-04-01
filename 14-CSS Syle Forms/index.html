@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Style Forms</title>
+    <link rel="stylesheet" href="./assets/css/select2.min.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="form-wrapper">
+                <form action="#" method="post">
+                    <div class="form-inner">
+                        <h2> Create an Account </h2>
+                        <div class="form-cols">
+                            <div class="form-row">
+                                <label for="first_name"> First name</label>
+                                <input type="text" minlength="2" name="first_name" id="first_name">
+                            </div>
+                            <div class="form-row">
+                                <label for="last_name"> Last name </label>
+                                <input type="text" minlength="2" name="last_name" id="last_name">
+                            </div>
+                        </div>
+                        <div class="form-row"> <label for="email"> Email</label>
+                            <input type="email" name="email" id="email">
+                            <p> We'll never share your email with anyone else.</p>
+
+                        </div>
+
+                        <div class="form-row">
+                            <ul class="radio-list">
+                                <li>
+                                    <label>
+                                        <input type="radio" name="gender" value="Female" checked> Female
+                                    </label>
+                                </li>
+                                <li> <label> <input type="radio" name="gender" value="Male"> Male
+                                    </label>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="form-cols">
+                            <div class="form-row"> <label for="country"> Country </label>
+                                <select id="counrty" name="country" required>
+                                    <option value="" disabled selected> Select</option>
+                                    <option value="Ukraine"> Ukraine- </option>
+                                    <option value="Greece"> Greece </option>
+                                    <option value="Italy"> Italy </option>
+                                    <option value="Spain"> Spain</option>
+                                </select>
+                            </div>
+
+                            <div class="form-row"> <label for="city"> City </label>
+                                <input type="text" id="city" name="city">
+                            </div>
+                        </div>
+                        <div class="form-btn">
+                            <button type="submit"> Sign Up</button>
+                        </div>
+                        <div class="terms">
+                            <p> By clicking the 'Sign Up' button, you confirm that you accept our <a href="#">Terms of
+                                    Use</a> and
+                                <a href="#">Privacy Policy</a>.
+                            </p>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="log_in">
+                            <p> Have an account?
+                                <a href="#"> Log in </a>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="form-wrapper">
+                <form action="#" method="post">
+                    <div class="form-inner">
+                        <h2> Profile </h2>
+                        <div class="form-row">
+                            <div class="avatar-add">
+
+                                <div class="avatar">
+                                    <img src="./assets/images/avatar.png" alt="">
+                                </div>
+
+                                <div class="right-side">
+
+                                    <div class="controls">
+                                        <div class="file-field-wrap">
+                                            <input type="file" id="avatar" class="file-field">
+
+                                            <label for="avatar" class="fake-file">
+                                                <span class="file-name"></span>
+                                            </label>
+                                        </div>
+
+                                        <button type="reset" class="reset-btn"></button>
+                                    </div>
+
+                                    <p>Up to 1 MB (300x300 px)</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="form-cols">
+                            <div class="form-row">
+                                <label for="f_name"> Name </label>
+                                <input type="text" maxlength="2" name="f_name" id="f_name">
+                            </div>
+                            <div class="form-row">
+                                <label for="email-2"> Email </label>
+                                <input type="email" name="email-2" id="email-2">
+                            </div>
+                        </div>
+                        <div class="form-cols">
+                            <div class="form-row">
+                                <label for="country"> Country </label>
+                                <select id="country" name="country" required>
+                                    <option value="" disabled selected hidden> Select</option>
+                                    <option value="ukraine"> Ukraine </option>
+                                    <option value="Greece"> Greece </option>
+                                    <option value="Italy"> Italy </option>
+                                    <option value="Spain"> Spain </option>
+                                </select>
+                            </div>
+
+
+                            <div class="form-row">
+                                <label for="city"> City </label>
+                                <input type="text" name="text" id="text">
+                            </div>
+                            <div class="form-row">
+                                <label for="zip"> ZIP Code</label>
+                                <input type="text" name="zip" id="zip">
+                            </div>
+                            <div class="form-row">
+                                <label for="phone"> Phone Number</label>
+                                <input type="tel" name="phone" id="phone" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit"> Update</button>
+                </form>
+            </div>
+
+        </div>
+        </div>
+
+
+
+    </section>
+</body>
+<script>
+    document.addEventListener('change', function (e) {
+        if (e.target.classList.contains('file-field')) {
+
+            if (e.target.files.length > 0) {
+                const fileName = e.target.files[0].name;
+
+                const label = document.querySelector(`label[for="${e.target.id}"]`);
+                const text = label.querySelector('.file-name');
+
+                text.innerText = fileName;
+            }
+        }
+    })
+
+
+</script>
+
+<script src="./assets/js/jquery-4.0.0.min.js"> </script>
+<script src="./assets/js/select2.min.js"> </script>
+<script> $(document).ready(function () {
+        $('select').select2();
+    });
+</script>
+
+
+</html>
